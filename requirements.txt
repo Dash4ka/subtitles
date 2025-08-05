@@ -1,0 +1,17 @@
+pytubefix 
+ffmpeg-python 
+datasets[audio] 
+accelerate 
+yt-dlp
+transformers
+fsspec[http]==2025.3.0
+gcsfs==2025.3.0
+openai-whisper 
+isort
+black
+git+https://github.com/openai/whisper.git
+
+!brew install ffmpeg
+
+deep-translator
+moviepy    

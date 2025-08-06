@@ -15,40 +15,9 @@ moviepy
 
 
 
-!brew install ffmpeg
-
-
-!wget "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip"
-!unzip NotoSansCJKjp-hinted.zip
-!mkdir -p ~/.fonts
-!cp *.otf ~/.fonts/
-!fc-cache -fv
-
-#!/bin/bash
-
-# Download Japanese fonts
-echo "Downloading NotoSans Japanese fonts..."
-wget -q "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip" -O NotoSansCJKjp.zip
-
-# Unzip and install
-echo "Installing fonts..."
-unzip -q NotoSansCJKjp.zip -d fonts_temp
-mkdir -p ~/.local/share/fonts/  # Modern font directory
-cp fonts_temp/*.otf ~/.local/share/fonts/
-
-# Update font cache
-echo "Updating font cache..."
-fc-cache -f ~/.local/share/fonts/ > /dev/null
-
-# Cleanup
-rm -rf NotoSansCJKjp.zip fonts_temp
-echo "✅ Japanese fonts installed successfully!"
 
 
 
 
-!ffmpeg -i video.mp4 -vf "subtitles=subs_ja.srt:force_style='FontName=Noto Sans CJK JP'" -c:a copy output_ja.mp4
-!ffmpeg -i video.mp4 -vf "subtitles=subs_zh.srt:force_style='FontName=Noto Sans CJK JP'" -c:a copy output_zh.mp4
-!ffmpeg -i video.mp4 -vf "subtitles=subs_ko.srt:force_style='FontName=Noto Sans CJK JP'" -c:a copy output_ko.mp4
 
 

@@ -2,7 +2,9 @@
 import torch
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 from datasets import load_dataset
-#TODO добавить hf token
+from config import HF_TOKEN
+
+
 # Выбираем девайс: графический либо центральный процессор
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32

@@ -42,8 +42,8 @@ def init_whisper():
  # Явно указываем транскрипцию (не перевод)
   #  })
 
-# def extract_audio(video_path):
-#     video = VideoFileClip(video_path)
-#     audio_path = "temp_audio.wav"
-#     video.audio.write_audiofile(audio_path)
-#     return audio_path
+def extract_audio(video_path):
+    video = VideoFileClip(video_path)
+    audio_path = "temp_audio.wav"
+    video.audio.write_audiofile(audio_path)
+    return audio_path

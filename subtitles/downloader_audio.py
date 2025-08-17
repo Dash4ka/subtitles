@@ -1,8 +1,8 @@
 #скачиваем аудио
-
 import yt_dlp
 
-def download_video(url):
+
+def download_audio(url):
 # Настройки для скачивания аудио в MP3
     ydl_opts = {
        'format': 'bestaudio/best',       # Лучшее качество аудио
@@ -21,4 +21,4 @@ def download_video(url):
     except Exception as e:
         print(f"Ошибка: {e}")
 
-download_video('https://vkvideo.ru/video5220238_171100332')
+#download_video('https://vkvideo.ru/video5220238_171100332')

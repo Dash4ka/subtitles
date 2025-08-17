@@ -5,11 +5,13 @@ from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
 import speech_recognition as sr
 from googletrans import Translator
 
-# Настройка бота
-API_TOKEN = 'ВАШ_ТОКЕН'
-bot = Bot(token=API_TOKEN)
-dp = Dispatcher(bot)
-translator = Translator()
+
+def init_bot():
+    # Настройка бота
+    API_TOKEN = 'ВАШ_ТОКЕН'
+    bot = Bot(token=API_TOKEN)
+    dp = Dispatcher(bot)
+    translator = Translator()
 
 # Универсальная загрузка видео
 def download_video(url, save_path="video.mp4"):

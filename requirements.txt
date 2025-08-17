@@ -1,3 +1,4 @@
+#зависимости проекта
 pytubefix 
 ffmpeg-python 
 datasets[audio] 

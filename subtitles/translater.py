@@ -1,7 +1,8 @@
-#кор
+#япон
 from deep_translator import GoogleTranslator
 
-def translate_srt(input_file, output_file, source_lang='ru', target_lang='ko'):
+
+def translate_srt(input_file, output_file, source_lang='ru', target_lang='ja'):
     with open("чебурашка.srt", 'r', encoding='utf-8') as f:
         srt_content = f.read()
 
@@ -21,4 +22,4 @@ def translate_srt(input_file, output_file, source_lang='ru', target_lang='ko'):
         f.write('\n\n'.join(translated_blocks))
 
 # Использование
-translate_srt("чебурашка.srt", 'subs_ko.srt')
+translate_srt("чебурашка.srt", 'subs_ja.srt')
